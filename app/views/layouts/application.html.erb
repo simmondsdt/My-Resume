@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resume</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <div class='flash_message'>
+      <% flash.each do |key, value| %>
+        <div class='flash <%= key %>'>
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+
+    <%= render '/layouts/navbar' %>
+    <main>
+      <div class='container'>
+        <%= yield %>
+      </div>
+    </main>
+    <footer class="page-footer light-blue darken-2">
+      <div class="row">
+        <ul>
+          <div class="col l6 offset-l2 s12">
+            <li class="white-text">© 2016 Copyright Daniel Simmonds All Rights Reserved</li>
+          </div>
+          <div class="col l4 s12">
+            <li><a class="white-text" href='/contact'>Contact</a></li>
+          </div>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

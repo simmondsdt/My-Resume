@@ -1,0 +1,18 @@
+<nav class='light-blue darken-2'>
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo center">Daniel Simmonds</a>
+    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href='/'>Home</a></li>
+      <li><a href='https://github.com/simmondsdt' target='_blank'>Portfolio</a></li>
+      <% if user_signed_in? %>
+        <li><%= link_to 'Logout'
+
+      <% end %>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href='/'>Home</a></li>
+      <li><a href='https://github.com/simmondsdt' target='_blank'>Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
